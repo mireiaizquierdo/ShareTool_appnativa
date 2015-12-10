@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.mireia.sharetool.Inicio">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/usern"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/address"
+        android:layout_toStartOf="@+id/logout"
+        android:layout_below="@+id/logout"
+        android:layout_alignRight="@+id/Ubutton"
+        android:layout_alignEnd="@+id/Ubutton"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Obtener ubicación"
+        android:id="@+id/Ubutton"
+        android:layout_marginTop="95dp"
+        android:layout_toStartOf="@+id/bmapa"
+        android:layout_toLeftOf="@+id/bmapa" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_alignTop="@+id/textView"
+        android:id="@+id/radioordenar">
+
+        <RadioButton android:id="@+id/radio_distancia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distancia"
+            android:enabled="true"
+            android:checked="true" />
+
+        <RadioButton android:id="@+id/radio_precio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ordenar por:"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/bmapa" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Precio máximo:"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/radioordenar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/preciom"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Distancia máxima:"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/preciom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/distanciam"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView3" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="BUSCAR HERRAMIENTAS"
+        android:id="@+id/buttonFil"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginTop="420dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:enabled="false"
+        android:layout_alignParentBottom="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/textView2"
+        android:layout_toRightOf="@+id/preciom"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_marginLeft="80dp"
+        android:textSize="22dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView10"
+        android:layout_below="@+id/textView3"
+        android:layout_toRightOf="@+id/distanciam"
+        android:layout_toEndOf="@+id/distanciam"
+        android:textSize="20dp"
+        android:text="Km"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp" />
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="CERRAR SESIÓN"
+        android:id="@+id/logout"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/preciom"
+        android:textSize="11dp"
+        android:layout_alignLeft="@+id/textView9"
+        android:layout_alignStart="@+id/textView9" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VER MAPA"
+        android:id="@+id/bmapa"
+        android:layout_alignBottom="@+id/Ubutton"
+        android:layout_alignLeft="@+id/logout"
+        android:layout_alignStart="@+id/logout" />
+
+</RelativeLayout>
